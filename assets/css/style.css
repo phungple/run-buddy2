@@ -1,6 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    /* box-sizing calculates the width and height of each element
+        border-box value calculates the width and height of the element
+        by including the border and padding additions to the content box
+        https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
+    box-sizing: border-box;
 }
 body {
     color: #39a6b2;
@@ -32,4 +37,26 @@ header nav ul li a {
     margin: 0 30px;
     font-weight: lighter;
     font-size: 22px;
+}
+footer {
+    background: #fce138;
+    /* width 100% means it will be the full width of its parent <body> element */
+    width: 100%;
+    padding: 40px 35px;
+}
+footer h2 {
+    display: inline;
+    color: #024e76;
+    font-size: 30px;
+    margin: 0;
+}
+footer div {
+    float: right;
+    /* The line-height assigns how much vertical space should be between lines of text content. The value 1.5 means we want the spacing to be 1.5 times the size of the font. */
+    line-height: 1.5;
+    /*text-align allows to align the text to left, right, center, justified. By default, it is left-aligned */
+    text-align: right;
+}
+footer a {
+    color: #024e76;
 }
