@@ -60,3 +60,25 @@ footer div {
 footer a {
     color: #024e76;
 }
+section {
+    padding: 60px;  
+}
+
+/* Hero style start */
+/* Dot. notation before class "hero" below is used to indicate to the browser that we're using a class as the CSS selector.*/
+.hero {
+    background-image: url("../images/hero-bg.jpg");
+    height: 600px;
+    /* we set background-size as cover to shrink the image so that it wont be clipped*/
+    background-size: cover;
+    background-position: center;
+}
+.hero-form {
+    background-color: #fce138;
+    padding: 20px;
+    width: 500px;
+    color: #024e76;
+    /* the values in the border property below will be: style, width, color */
+    border: solid 3px #024e76;
+}
+/* Hero Style end */
