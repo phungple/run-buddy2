@@ -13,4 +13,4 @@ https://phungple.github.io/run-buddy2/
 ## Contribution
 Made with ❤️ by Phung Le
 
-### Run Buddy Inc.
+### &copy;2019 Run Buddy, Inc
