@@ -67,7 +67,7 @@ section {
 /* Hero style start */
 /* Dot. notation before class "hero" below is used to indicate to the browser that we're using a class as the CSS selector.*/
 .hero {
-    background-image: url("../images/hero-bg.jpg");
+    background-image: url("../images/hero-bg.jpeg");
     height: 600px;
     /* we set background-size as cover to shrink the image so that it wont be clipped*/
     background-size: cover;
