@@ -53,16 +53,20 @@ footer {
     background: #fce138;
     /* width 100% means it will be the full width of its parent <body> element */
     width: 100%;
-    padding: 40px 35px;
+    padding: 40px 35px; 
+    /* the code lines below was added after removing inline display from h2 and float right from div below */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 footer h2 {
-    display: inline;
+   /* display: inline; was removed because we will use flexbox*/
     color: #024e76;
     font-size: 30px;
     margin: 0;
 }
 footer div {
-    float: right;
+    /*float: right;  was removed in order to use flexbox */
     /* The line-height assigns how much vertical space should be between lines of text content. The value 1.5 means we want the spacing to be 1.5 times the size of the font. */
     line-height: 1.5;
     /*text-align allows to align the text to left, right, center, justified. By default, it is left-aligned */
