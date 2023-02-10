@@ -14,20 +14,25 @@ body {
 header {
     padding: 20px 35px;
     background-color: #39a6b2;
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap tell the container to let child elements break onto the next line 
+    when they dont fit on one line once we resize the browser window */
+    flex-wrap: wrap;
 }
 header h1 {
     font-weight: bold;
     font-size: 36px;
     color: #fce138;
     margin: 0;
-    display: inline;
+    /*display: inline; was removed so we can use flexbox property*/
 }
 header a {
     text-decoration: none;
     color: #fce138;
 }
 header nav {
-    float: right;
+    /*float: right; was removed so we can use flexbox property*/
     margin: 7px 0;
 }
 header nav ul li {
