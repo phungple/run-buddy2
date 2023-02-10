@@ -35,13 +35,19 @@ header nav {
     /*float: right; was removed so we can use flexbox property*/
     margin: 7px 0;
 }
-header nav ul li {
-    display: inline;
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
 }
 header nav ul li a {
     margin: 0 30px;
     font-weight: lighter;
-    font-size: 22px;
+    /* the unit vw stands for viewport width. In this case the font size should be roughly 1.55% of 
+    the window's overall width. */
+    font-size: 1.5vw;
 }
 footer {
     background: #fce138;
