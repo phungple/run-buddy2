@@ -19,6 +19,15 @@ header {
     /* flex-wrap tell the container to let child elements break onto the next line 
     when they dont fit on one line once we resize the browser window */
     flex-wrap: wrap;
+    background-image: url("../images/hero-bg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: 80%;
+    /* always put the standardized version of a property at the end of a sequence of vendor-prefixed versions*/
+    position: -webkit-sticky; /* need to use vendor prefix for Safari browser */
+    position: sticky;
+    top: 0; /* this property is important cuz it tells the browser where to "stick" the element.*/
 }
 header h1 {
     font-weight: bold;
@@ -26,6 +35,10 @@ header h1 {
     color: #fce138;
     margin: 0;
     /*display: inline; was removed so we can use flexbox property*/
+    text-shadow: 0 0 10px rgba(0,0,0,0.5); 
+    /* text-shadow: <horizontal offset> <vertical offset> <radius of the shadow blur> <color>
+        <color> uses rgba(0,0,0,0.5): rgb(0,0,0) is black and a(0.5) is 50% transparent.
+                                      rgb(255,255,255) is white and a(0) is 100% transparent, a(1) is 0% transparent. */
 }
 header a {
     text-decoration: none;
@@ -48,6 +61,14 @@ header nav ul li a {
     /* the unit vw stands for viewport width. In this case the font size should be roughly 1.55% of 
     the window's overall width. */
     font-size: 1.5vw;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+header nav ul li a:hover {
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
+
 }
 footer {
     background: #fce138;
@@ -87,7 +108,8 @@ section {
     /* we set background-size as cover to shrink the image so that it wont be clipped*/
     background-size: cover;
     background-position: center;
-    /* position: relative; */
+    background-attachment: fixed;
+    background-position: 80%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -107,6 +129,7 @@ section {
     font-style: italic;
     font-size: 55px;
     color: #fce138;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .hero-form button {
@@ -115,18 +138,23 @@ section {
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    border-radius: 10px;
+}
+.hero-form button:hover {
+    background-color: #39a6b2;
 }
 .hero-form {
     /* the values in the border property below will be: style, width, color */
     border: solid 3px #024e76;
-    background-color: #fce138;
+    /* #fce138 is HEX color to rgb(252,225,56) */
+    background-color: rgba(252,225,56,0.8);
     padding: 20px;
     width: 40%;
     color: #024e76;
     margin: 3.5%;
-    /* position: absolute; */
-    /* bottom: 120px; */
-    /* right: 140px; */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    /* border-radius: <left radius> <top radius> */
+    border-radius: 15px;
 }
 .hero-form h3 {
     font-size: 24px;
@@ -144,6 +172,12 @@ section {
     color: #024e76;
     width: 100%;
     margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.75);
+}
+.form-input:focus {
+    background-color: rgba(255,255,255,1);
+    outline: none;
 }
 .hero-form label {
     margin: 0 5px;
@@ -185,11 +219,13 @@ section {
     margin: 50px auto;
     padding-bottom: 50px;
     width: 80%;
-    border-bottom: 1px solid #39a6b2;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+}
+.step:not(:last-child) {
+    border-bottom: 1px solid #39a6b2;
 }
 .step h3 {
     color: #024e76;
@@ -306,6 +342,12 @@ section {
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.75);
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    background-color: rgba(255,255,255,1);
+    outline: none;
 }
 .contact-form button {
     width: 100%;
@@ -315,6 +357,11 @@ section {
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
+    border-radius: 10px;
+}
+.contact-form button:hover {
+    color: #fce138;
+    background: #39a6b2;
 }
 .contact-info a {
     color: #fce138;
@@ -327,6 +374,7 @@ section {
    header {
     padding-bottom: 0;
     justify-content: center;
+    position: relative;
    }
    header h1 {
     width: 100%;
